@@ -1,0 +1,258 @@
+/* how to prevent scrollbar? maybe only on FF */
+
+html {
+  margin: auto;
+}
+
+body {
+  background-image: url("images/flower.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  cursor: none;
+}
+
+.weave {
+  content: "";
+  background: url("images/weave.gif");
+  background-repeat: repeat;
+  opacity: 0.5;
+  top: -30px;
+  left: -3px;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  top: -22px;
+  position: fixed;
+  width: 100%;
+  background: url("images/board_title_top.png"), linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat;
+  margin-left: -8px;
+  margin-top: -8px;
+  padding-top: 30px;
+  padding-bottom: 150px;
+}
+
+@media screen and (max-height: 900px) {
+header {
+  text-align: center;
+  top: -22px;
+  position: fixed;
+  width: 100%;
+  background: url("images/board_title_top_shorter.png"), linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat;
+  margin-left: -8px;
+  margin-top: -8px;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  }
+}
+
+.responsive {
+  width: 100%;
+  max-width: 1700px;
+  height: auto;
+  padding: 20px;
+  background-color: rgba(206, 59, 149, 0.3);
+  box-shadow: 0 0 200px rgba(206, 59, 149, 0.7);
+  border-radius: 20px;
+  margin-top: 40px;
+  /* margin-left: -20px; */
+}
+
+@media screen and (max-width: 1800px) {
+  .responsive {
+        max-width: 90%;
+  }
+}
+
+/* laptop */
+
+@media screen and (max-height: 900px) {
+.responsive {
+  width: 92%;
+    max-width: 1000px;
+    margin-top: 10px;
+
+  }
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 52px;
+  max-width: 80vw;
+}
+
+
+@media screen and (min-width: 1801px) and (max-width: 2500px) {
+  section {
+    padding-left: 270px;
+    max-width: 2000px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  section {
+    padding-left: 0px;
+    max-width: 500px;
+  }
+}
+
+.array {
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1 {
+  font-family: 'Inconsolata', monospace;
+  color: #fff;
+  font-size: 2.5em;
+  text-shadow: 0 0 10px #ce3895, 0 0 20px #0000FF;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1800px) {
+h1 {
+        max-width: 90%;
+  }
+}
+
+/* laptop */
+
+@media screen and (max-height: 900px) {
+h1 {
+    font-size: 1.75em;
+  }
+}
+
+
+h2 {
+  font-family: 'Inconsolata', monospace;
+  color: #e9ef81;
+  font-style: italic;
+  text-shadow: 0 0 10px #51acd1, 0 0 20px #51acd1;
+  font-size: 2.25em;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1800px) {
+  h2 {
+        max-width: 90%;
+  }
+}
+
+/* laptop */
+
+@media screen and (max-height: 900px) {
+h2 {
+    font-size: 1.5em;
+  }
+}
+
+canvas {
+  margin-top: 82px;
+  margin-bottom: 82px;
+  margin-left: 82px;
+  margin-right: 82px;
+  box-shadow: 0 0 200px rgba(87, 234, 206, 0.8);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1800px) {
+  canvas {
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  canvas{
+      margin-top: -80px;
+      margin-bottom: 164px;
+
+  }
+}
+
+#canvascontainer {}
+
+.scroll {
+  background-color: rgba(228, 97, 178, .7);
+  width: 100px;
+  height: 110px;
+  position: fixed;
+  bottom: 138px;
+  right: 114px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(87, 234, 206, 0.9);
+}
+
+.fas {
+  color: #e9ef81;
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 60px;
+  opacity: 1;
+    cursor: pointer;
+}
+
+.top {
+  font-family: 'Inconsolata', monospace;
+  color: #e9ef81;
+  font-size: 2.5em;
+  text-shadow: 0 0 10px #ce3895, 0 0 20px #0000FF;
+  margin-top: 0px;
+}
+
+
+/* SCROLLBAR */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 80px;
+  height: 80px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #80a9ba;
+}
+
+::-webkit-scrollbar-corner {
+  background: #80a9ba;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #a85a9a;
+  border-radius: 40px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e9ee87;
+}
+
+
+/* note that a gap appears in between the canvas elements since they are inline replaced elements */
